@@ -1,0 +1,21 @@
+<h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+<p>The grid <%= @grid %></p>
+<p>Your word : <%= @word %></p>
+
+<p><%= @included %></p>
+
+<p><%= @english %></p>
+
+<% if @included %>
+  <% if @english %>
+    <p>Congratulations !</p>
+  <% else  %>
+    <p>Sorry your word doesn't exist</p>
+  <% end  %>
+<% else  %>
+  <p>Oops you can't write <%= @word %> with these letters : <%= @grid %></p>
+<% end  %>
+
+<%= link_to 'Play again', new_path %>
